@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone website</title>
+    <link rel="stylesheet" href="4.website.css" />
+
+    <script
+      src="https://kit.fontawesome.com/38e16b585e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav1">
+      <div class="logo">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAACFCAYAAAAqy7R1AAASnklEQVR4nO1dC7hN1dp+B11wCB13e9vZIrtNHCGhi1C/W4jQqVNEqdPvd0vOqdwOuqmzSajU0UUUQmkrp9y2TWLnEs52KQcplfslpBj/880x5xpjzLXWXHNd5l6r55nv8+xnzTUvY4z5rm+M8d3G2OxCj6ocPhKKYj6diYdPqgfwSfUAPqkewCfVA/ikegCfVA/gk+oBfFI9gE+qB/BJ9QA+qR7AJ9UD/D5IzW4BPmkN+N1PpkBjIuN3QSpv/wBQqQbQ8SHgootToEXO+H1I6tlT4vP0CaBY8WS3JiJSg9SLL3W+fv68+LxwHuAOPvWLL0lsu2JE0knlPR4Df2kd0G1wfAW1ugv8pfXgD09MVNNiRvIltfGtwGV/BO8+FLz7kND3sGLyk7Hg663vAX9wglEOruvgbXtdIOmksn/2A04eEV+6DQHv+3TwTaXLic8/lAX4Bf0aPdPvGXHML4CN6+F1kyMi+ZL6wx6wx9uJSYjQ5i/gDzyn3cJWzwd+OQ2sXQT8ek5e6DZYk2424nbg641F1vRwSJ1oavpV4M9+FujebNZTwKKp8jpJ6c/H5ffmncEHTAl8ZU/fDXy1skibHA6po1J9uwNs5O3AmZPGV55xtX5dJZSuV68dOGYT+qQMoUgpSbVweVUguzmQvyB4/LSjZVdgbyHw7fbktDUMUjuZgvTOS0sBl5QUltT534BzZ8X4Sp8piotSolmkCmVkAxlXg1fOAKrUBMpVEucNUktIVerXXwSpJ44AJw4BP/wX7Ic9wL5CYO824MgPyX6bJEpqrYZAw1bg2S2BWg0EcfGCLK7/bgG25oNtXgEUrk3KqxUtqVVqgt/YHWjSDkir43zvqaPA15uA73aBHT8InD4JlPgDeNkKQOUrgMxrgArVncv4cS+w4TOwlXOEFBcRiobUOo3B2/UFmnWKfO8XuWD584Etq0Q3DwcaDuo2BW9xB9Cii0G4IzavAFs8vUi0BG9JLVcJ/K7HAZJOFZuWCVdetSvlyV0bwKYPM1SrqEFmbp9x+o9GY+ueLUCjtnppJLlvjzHGYq/gjZ7KGHjP4eATV+uEfrUSbHhbsJVzxQRk3T7vBaGjxkIo4cRhsEkPg00bJL1Yl5QAo7F1UAvg8w/lvY3agOesEj9CyTIxv6ITEi+p9VqC9xkPVKslz21cCvbRy8B/PjfGUj5hWeASy3kQWLc4uBx6YZrIal8LVEwDSpYWatRP+8BoMqKJ6NhPwc9lZIOPnAeUKmOW/wCw7mOg5jXgHR8EmneR9x47CPbmSGH+JhAJJZX3GAZ0HShP7CsEm/sCUPCJ+F66HPj0rZLQCb2N7qiTWRqcyrjlz8I0DQfyAeTNBZufE6xG0YT4/HKguNAYDd8C/RCErGbgvf5mjPMBLH0H7LXhCWM1MaTSrDzkNaD+DbLgmf8Acl/VbuNjFgZehr01Cvj4db0csufvGwNcVkGeI/P0wG7gzCng0pJAlSv067+cAZs1Hvj3G3pZ2c3Bn5wjjo/9BPZwI/36zT3B7/uHnOD2/gfs+fuBQ/vjYUK8W9ykZl4DPugVoGK6+L5nK9iU/wP279Tva3Az+N9miuN1i0W3V3FbH/DeY+WJLavA/v0msC1fEGqBogQkba3vBpq2l+c/nAo2+ymtSPLRWs5v9tZo4OPX9DovrwL+0D+B+jeK72dOgU3sH7eGEB+pDW8BH/6W/L7qfbCpA0PeaoyjpJueOwvWu7YeFrGVw14dBiyfHbn+xv8DPnBaIBjIZjwZJLE0KRkW2pmTYP3qCQPB3rZ7RgAd+kdffxjEPvvTLKoSMff5sIQairql7C+aphNKQ8ej/xLHF84LJ7PbFyr4BOyJ9sIwIHJoRrd6jNUuGhpgTnxhogJs5lhBpAkjitD6HndtCIHYSK1eG3yYlAhSiTA/fGyIX3+7vPezt/VrnR6WE8rLQ4Bta6JrC02Gz90ry/vz4/r19Z8Ehg/uZHwsnw32yqOyHIomWMNClIie1JJlwEcvCHw1VJL3c5yfubq5+Nz9la4GUczp1t7imBwiq96P6SWwY73UIog4K/xiwbpWt6mMd4XCinfBJv9v4AJ/fJYYOqJE1KTyUfMCjWbvPg188i/nB6jbXZEtjjcv169dfb0sa+HkqBuvwlCtLJBvQb22dZU4IK9XWu2wZRhYsxBsyoDAVz5qftSh76hINWJHGSZB1I0/mBLpEaD6lYEECLZHd2rwrOvEAflJSZmPB99sBsjxQuVe1UQvSHViV49AKiF/gQjnEMpVBB/2ZlQNc08qmZukkMO0kF7/u7vnylWWx0cO6Ncq1hCf5E2yAn+h0LQd+Ii5QNv7nOuiIYRQIU0/f/RHeVy2ort2U3yMJkyaVEn/7jLAxUMCrknlXQcFjmm2dI0SJeWddq+T5UM141Jh6+453BgqeJ8I9Vr6rN03+8sZGYUtUSr4uTAwBMdUwXinv7p+zjWpxoRkgj/yousKcEFRn+x5UGd/Fp9lLneue/pw0SUn9ne8L2DW2n88mpyKma/qlDZkg6HqWZoJWYgu4b77k7vOmkzIiho83d1zPx+Tx7ZZmVnuN9Ityzl0y+1fiMmDHCPhQMRdUU9c/HGPfhPVa5Jjj8qGA793tGGUGFizMCpjIKqJir33LPDNJvGFxrleLsbVw9/LY/tYt3O9WTCLWScMoM61AUllO7/Ur6kRArU94UAmcLt+4uLRHzU1yw2iVqnYM/fISaXzI4bN7giahMxuHhTL31Eg4/yUgxoHDCPCwsalekHpdeXx/l3OlTTrCN7vWfm+43tF3ajolf9Tx8BGdZEDeO+xYiIJB4p+krpD+FNr/SYySz80s1Co68ZqGja4Gbj2VnGcN0/mZpngjdqIg5/2OXuhbu0NPvDlwFf21F1GjCxaxGam7t8JNrKzHPS7DAC/f3zY29lG06Ih60SVGgLpuhTks0xDSpCIBvVvlN4vquvt0frDNJ7WaymO7RKs4o5BwndglfNCPxEniwGxO1S+2QQ2oqOcadveJ8w68tDbkS/NWn7HIP0iZeo9IyWUPzLZyORzBZIsqtMigtyJp47pxSuqEFv+bshSqU5+p7T7jTQiy7EeA4qPyi4zOuanaRCnyCdZRuUrA5QIcUM3MFLCqatZIOLTrxKeqrQ6YKsX6C9P5ezfIQN3ZL426whGahBpD+qMTZNO0/bg9z+lDReG03vlHL19pS4DHn1daAbk57X7KCh5g34Uy7l+aD/YmG6GthEPEhZOMSRM7bqLpoIteFEq5BXSwCebyQ0UZxrYPLiQrOvAe48DamTp52nGpnJIqa9UQ7928FsRHV0fLFl8XK5I1KAXpXlgZ4G4QPpyx/4i0mthS56QdNUhHiPik1QFbP3HYDQ2Wrod2d+teoGRpkDxIfokZ3Ld64Tqk34V2NqP9EIOfWe4BhlJZ6V0aRRQEI+cIWrMiu7NfRXsxb8GRxkMF+AThrQbWPsR2GIztENS/ugMPZw9fyLYK0OB384FlRMTFwmPpqbXBR/8KlA1U56jrkfds/ALManQbE14P0f4YsOBfoBaDcFrNwJKlzdWqbBdXwK7twDbVof04hu4uRd4/+fFMflbh7cVPmDK0s5qJu87eQRs0kPR+3AjwJtkiuIXCTWLdM/iSg7cslmGp4p3HxwI3rE3RgBLZiSubgqxDDVjURRzWjQVnHIMOtsUeGrL7KcDmkci4W2GSoXq4PQybf6inydjQEnTMWbbDZ/GXx/F/J9ZIr9TnoDduUL+UhrrQwwZiULR5FJVzQQny4vch6GyQkit6psd0VsVCXzaBpGCaQf5a/Png1GPsOL/HiJhE5UjTh0F27QcbOksMPKpUhKvGqAj2/+SkiL90QKti+o6EIxi/qbz2UDFdCMwxygPS1V92t4LKLEwA5SftWSGkaPFVs0LndHiAZKXn0qk1r9B2Oxkaf16Dqxv3YDfk882zcnPPxQzvAljNYppHLB7M+X9k9YIdYvyqhZMAr7KA77/OimvlrxM6oPfisniyAHw4W+LOBAFCE1pZdMfA294i/QNmGB588DTs8Ao3/S3X8VJytsy9VeD0EhxM4+R/PR0SuylMY+0hJr1ZayKCF82K/h+MhxybB4tyiuwQElwSUbyl/yQSnPSdKhEiACEhfUcOXhoHUCSkRrrqCxLJtZl58XMDkdLhFJgrU3ySaWZ3yIzVjPReo7KKp78/QBSQ1Kt3SYuRFiMFg7kCIcZpwpnuhYhkk+qMQ4eFseUQGZLMIuI0uXBLRcgJaqdTLzZGS1SYnEa++AlEfaunCFSH2n9kxuJo+6e2UAG/HJfEZpEkpEaK/7I0U3JYyRxpFpZ4Y9oULDEMfOwKJFSa1P5zD2CVHJKk3nqlKFHMz2FvCldnV7kkSbBaUVJQmpIKsyMPAt588DmPBfhAdM/QAm6hDLlU4bU1Fnvr+qobtepXqrkaRVLHflIzX2pirlsVoruUZWapLpNIosi2awokVrd35I8KxswEtTIZwpYUhZSh1TV629l70UAz6wvbzgdX9QgkUid0Z2kbsc6EUGl5USU0/SdQxzpj9WNVXsGyKN/4Jsia2okpNYeKtWuBB+3KLrVzZyDjblDrFBJEaTgbj9VRN5rdovQeVkWKOV815dCn/UwMhoL/H+d5AH87ZM9gE+qB/BJ9QA+qR7AJ9UD+KR6AJ9UD+CT6gF8Uj2AT6oH8En1AD6pHsAn1QP4pHoAn1QPEH04Ja0R0KAVeMVqgVPs9ClgSz5QGGLZTpM7wbObge3dbjiVsX+D+7qy2gL1W4KXKh25Hut+a/cLWvsa6j71HsL6ueKdal8LnlE3cjub3AnUNGNoYdrintS0RuA9hwKNbwq6ZHi5u/YFlrwH9sZQ/dqQHHmPcd0FqVltwR8YA1TV16EG6tldCDbzuaAX4u17a+1jDzUDjuvr+/mACUB5c1fLA/vAiFRjK7pRso6ClWAv3B3cLhKQIXLRMPv5REhS3XV/esmx74YkVAU76GIrjUjoMBR85IwgQjVkZoE/NkVInVr/Ytt2ny176t9JIsvLbULZUnPHNpLKAmUnSnrPNNvWoET4jcqGtkcPAbmhl4BGJrVsmngBdeuhs6eBvFxD8ow/atCBfUD+exGLcwT1hu62HX12F8p6dhfK8yVKiXaVVfZlIak5KnP++Z9u0Mtq3ln/rrSXvacTxNvYJJVIVntBrr5noYqI3d/YT0QllLoG7Yp7PP7NW4PqouFFrSsvF2yaTjIf+o58OSK262BtyGErPgCnIYKQ3ViQbraVN1Mke1uB/g4krXQu29wB+KZOwIIc+axKMgmVgwA5S6rt1yEpMMYaDwg1UE/ZTo7qmha8D5VR/1ll36mmtn1Z1nygf7eGAHoXZUhhq3ODy17yjvxCP646fNykLGVfuciRA2dSbd2FpMAz0KyqSukWh90htioxfhoj1bHVkjgTgSFAfRf6UZaH2FeLJi1liOEdzIXKHZQedPY02ALnXTgdSeXpV+onSIXwCjX1VB+2vSB8RYdtG3vbNxHbqGwoYw4BWtdfZ9sdU312obKPNv1gNOO37ibPRZBSRJTUy20rksPphwmApYsGYNtgRgXbpv9PFNKDNdCsrAwRNO5qXX/FvPANtktrnyfksy6kFImyqPj4T40FusbfeO+Id42yac532jettSFIWi24kFL8bs3UCKQYE4w6BpJ2oEqfqm+Ggk1aA+W4kFJEJPWIbX08TSYeIchwsO/qo4DMSRVBw0EHZScMc1Jja5TdgEijiSDN7DPbdkw0DrvUehxJZdt1kzJo7EokaL9qta4aDv9aKa2W/l1No6QfXrWaLCuL9Er7OOsE+5gexdZKzpJqV3BJV4s0XsUKmzWEpq1C10XnspV/0UHPKM4PrWuTlWdNriRlqipm128TCGdSqSF5ipJMFsyoOd4NA+uUvfioLrLmVGJJNRqld0vNXLSbkmv1SVPzDZA0t4pvJ8xwiGimslljwWvXl2pF1RrCU3P0CeCoubdJtQx3td3WE/y2nsHnTe8WTQScJMjqvo1vAq+3DPh+r6xHNRBIEhWnRpC9vsSm4Fu9wSyft+kBFsoIiBORZ//jtP9dD/ECKqhhmVniL4p9niPWNXmYPgxQ2aHqIbfdGNu/SFZNSXLyhJhYNKuQygzhjYoX7lQqetkhzcFm5gSTq4Ls9c1x7kZW+CnY3zuKYedsiH9HR+dIsolQlbQOujOGbQizxb3NN8A7RdjnOgbElklN41yd6/VzprM34XDjzVfbVS3LneVH5Z487ByJsN6TtIsoIhZ+eroH8AN/HsAn1QP4pHoAn1QP4JPqAXxSPYBPqgfwSfUAPqkewCfVA/ikegCfVA/gk+oBfFI9gE+qB/BJ9QA+qR7AJzXRAPD/ROtyncpn6IwAAAAASUVORK5CYII="
+          alt=""
+        />
+      </div>
+      <div class="contact">
+        <i class="fa-solid fa-envelope"></i> support@gloxy.com
+        <i class="fa-solid fa-phone-volume"></i>+1-325-555-0156
+      </div>
+      <ul type="none" id="links">
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-google"></i></li>
+        <li><i class="fa-brands fa-linkedin-in"></i></li>
+      </ul>
+    </div>
+    <div class="nav2">
+      <ul type="none">
+        <a href="#home"><li id="li1"><p>Home</p></li></a>
+        <a href="#service"><li id="li2"><p>Services</p></li></a>
+        <a href="#work"><li id="li2"><p>Works</p></li></a>
+        <a href="#about"><li id="li2"><p>About</p></li></a>
+        <a href="#team"><li id="li2"><p>Team</p></li></a>
+        <a href="#price"><li id="li2"><p>Pricing</p></li></a>
+        <a href="#blog"><li id="li2"><p>Blog</p></li></a>
+        <a href="#help"><li id="li2"><p>Contact</p></li></a>
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+      </ul>
+    </div>
+    <div class="main" id="home">
+      <div class="content1">
+        <h2>Clean & Creative</h2>
+        <h1>We Are an Expert</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor <br />
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="div1">
+        <i class="fa-solid fa-wand-magic-sparkles" id="i"></i>
+        <h2>Beautiful Designs</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="div1">
+        <i class="fa-solid fa-gift" id="i"></i>
+        <h2>Unique Features</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="div1">
+        <i class="fa-solid fa-handshake-angle" id="i"></i>
+        <h2>Reliable Support</h2>
+        <p>
+          We strive to embrace and drive change in our <br />industry which
+          allows us to keep our clients <br />relevant.
+        </p>
+      </div>
+    </div>
+
+    <div class="services" id="service">
+      <span id="back">SERVICES</span>
+
+      <div class="serv">
+        <h1>Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+
+      <div class="box" id="box1">
+        <span id="id">
+          <i class="fa-solid fa-lightbulb"></i>
+        </span>
+        <h2>Creative Solutions</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="box" id="box2">
+        <span id="id">
+          <i class="fa-solid fa-bullseye"></i>
+        </span>
+        <h2>Excellent Features</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="box" id="box3">
+        <span id="id">
+          <i class="fa-solid fa-user-secret"></i>
+        </span>
+        <h2>Friendly Support</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="box" id="box1">
+        <span id="id">
+          <i class="fa-solid fa-arrow-up-right-dots"></i>
+        </span>
+        <h2>SEO & Advertising</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="box" id="box5">
+        <span id="id">
+          <i class="fa-solid fa-hexagon-nodes"></i>
+        </span>
+        <h2>Marketing & Consulting</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+      <div class="box" id="box6">
+        <span id="id">
+          <i class="fa-solid fa-pen-ruler"></i>
+        </span>
+        <h2>Design & Development</h2>
+        <p>
+          We strive to embrace and drive change in our <br />
+          industry which allows us to keep our clients <br />
+          relevant.
+        </p>
+      </div>
+    </div>
+
+    <div class="needs" >
+      <div class="opacity">
+        <div class="texts">
+          <h1>We offer best in class service for <br />your needs</h1>
+          <p>
+            We strive to embrace and drive change in our industry which allows
+            us to keep our <br />
+            clients relevant.
+          </p>
+          <button>Purchase Now <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <img src="https://gloxy-react.envytheme.com/static/mac-pro-c6f8c7b6307fe2f860a0780f058a3884.png" alt="" />
+      </div>
+    </div>
+
+    <div class="works" id="work">
+      <span id="back">WORKS</span>
+
+      <div class="serv">
+        <h1>Our Works</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+
+      <div class="work_boxex" id="work_boxex">
+      <div class="hover_div">
+        <img
+          src="https://gloxy-react.envytheme.com/static/work-1-a12660f5e574ae816a397bdf01550c87.jpg"
+          alt="" 
+        />
+        <div class="ovarlay">
+          <h2>Work Details</h2><br><br>
+          <i class="fa-solid fa-link"></i>
+        </div>
+         
+  
+        </div>
+      </div>
+      <div class="work_boxex">
+        <div class="hover_div">
+        <img
+          src="https://gloxy-react.envytheme.com/static/work-2-6cf1dcd9dfa0bf5503ddacd5363dec12.jpg"
+          alt=""
+        />
+
+         <div class="ovarlay">
+          <h2>Work Details</h2><br><br>
+          <i class="fa-solid fa-link"></i>
+        </div>
+       </div>
+      </div>
+      <div class="work_boxex">
+        <div class="hover_div">
+        <img
+          src="https://gloxy-react.envytheme.com/static/work-3-2c3c3ffbb18be6c9d96d1890b6197c47.jpg"
+          alt=""
+        />
+         <div class="ovarlay">
+          <h2>Work Details</h2><br><br>
+          <i class="fa-solid fa-link"></i>
+        </div>
+        </div>
+      </div>
+      <div class="work_boxex" id="work_boxex">
+        <div class="hover_div">
+        <img
+          src="https://gloxy-react.envytheme.com/static/work-4-0bfc40d6444dccb10516834bafd3edf7.jpg"
+          alt=""
+        />
+         <div class="ovarlay">
+         <h2>Work Details</h2><br><br>
+          <i class="fa-solid fa-link"></i>
+        </div>
+        </div>
+      </div>
+      <div class="work_boxex">
+        <div class="hover_div">
+        <img
+          src="https://gloxy-react.envytheme.com/static/work-5-ecaf0f6b784b52ae0412a990243cf892.jpg"
+          alt=""
+        />
+         <div class="ovarlay">
+          <h2>Work Details</h2><br><br>
+          <i class="fa-solid fa-link"></i>
+        </div>
+        </div>
+      </div>
+      <div class="work_boxex">
+        <div class="hover_div">
+        <img
+          src="https://gloxy-react.envytheme.com/static/work-6-bc8277e4e832bc21957a9d3b0a046764.jpg"
+          alt=""
+        />
+         <div class="ovarlay">
+         <h2>Work Details</h2><br><br>
+          <i class="fa-solid fa-link"></i>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about_us" id="about">
+      <span id="back">ABOUT</span>
+
+      <div class="serv">
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+      <div class="about_content">
+        <h2>Take your business to the next level</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor <br />
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque 
+          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+          veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas
+          sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+          eos qui ratione voluptatem sequi nesciunt.
+        </p>
+      </div>
+      <div class="about_image">
+        <img
+          src="https://gloxy-react.envytheme.com/static/about-img-7dc63dd83bb64830328d88a8840a5880.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="team" id="team">
+      <span id="back">TEAM</span>
+
+      <div class="serv">
+        <h1>Our Team</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+      <div class="work_boxex" id="work_boxex">
+        <img
+          src="https://gloxy-react.envytheme.com/static/team-one-e943a19b832ca271a11988e34fda1d05.jpg"
+          alt=""
+        />
+      </div>
+      <div class="work_boxex">
+        <img
+          src="https://gloxy-react.envytheme.com/static/team-two-7fb54c823560be802a23324553602569.jpg"
+          alt=""
+        />
+      </div>
+      <div class="work_boxex">
+        <img
+          src="https://gloxy-react.envytheme.com/static/team-three-b359b1980629a11f954241e7aa3a0b38.jpg"
+          alt=""
+        />
+      </div>
+      <p class="ellipses"><span>.</span>..</p>
+    </div>
+
+    <div class="audio">
+      <div class="video_cover">
+        <button><i class="fa-solid fa-circle-play"></i></button>
+
+        <div class="inner">
+          <h1>Watch Intro Video</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            fermentum sagittis <br />nulla, non vehicula mauris rutrum vitae.
+            Sed non consequat dolor
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <span id="back">PRICING</span>
+
+      <div class="serv">
+        <h1>Pricing</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+
+      <button id="button1">MONTHLY</button>
+      <button id="button2">YEARLY</button><br />
+
+      <div class="price_boxex" id="price_box_left">
+        <div class="price_inner" id="price">
+          <h3>BASIC</h3>
+          <h1>Free</h1>
+          <p>
+            Free of charge one standard listing active for <br />
+            30 days
+          </p>
+        </div>
+        <div class="price_content_outside">
+          Any Ware Access <br />
+          1 GB Hosting <br />
+          1 Unique Users <br />
+          2 GB Capacity <br />
+          Weekly Backups <br />
+
+          <button>PURCHASE NOW <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="price_boxex" id="price_box_center">
+        <div class="price_inner1">
+          <h3>Extended</h3>
+          <h1>$145</h1>
+          <p>
+            One time fee for one listing, highlighted in the <br />
+            search results
+          </p>
+        </div>
+        <div class="price_content_outside">
+          Any Ware Access <br />
+          10 GB Hosting <br />
+          2 Unique Users <br />
+          12 GB Capacity <br />
+          Weekly Backups <br />
+          15 Domain Names <br />
+          Enhanced Security <br />
+
+          <button id="center_button">
+            PURCHASE NOW <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="price_boxex" id="price_box_right">
+        <div class="price_inner">
+          <h3>Professional</h3>
+          <h1>$555</h1>
+          <p>
+            Monthly subscription for unlimited listings and <br />
+            availability
+          </p>
+        </div>
+
+        <div class="price_content_outside">
+          Any Ware Access <br />
+          15 GB Hosting <br />
+          2 Unique Users <br />
+          15 GB Capacity <br />
+          Weekly Backups <br />
+
+          <button>PURCHASE NOW <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="facts">
+      <span id="back">FUNFACTS</span>
+
+      <div class="serv">
+        <h1>Some Fun Facts</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+
+      <div class="div1" id="left_box">
+        <i class="fa-solid fa-sack-dollar" id="i"></i>
+        <h2>140</h2>
+        <p>Clents Work With</p>
+      </div>
+      <div class="div1" id="fact_box">
+        <i class="fa-solid fa-circle-check" id="i"></i>
+        <h2>205</h2>
+        <p>Completed Projects</p>
+      </div>
+      <div class="div1" id="fact_box">
+        <i class="fa-solid fa-medal" id="i"></i>
+        <h2>50</h2>
+        <p>Winning Awards</p>
+      </div>
+    </div>
+
+    <div class="comments">
+      <h1>
+        <i class="fa-solid fa-quote-left" id="i"></i>
+      </h1>
+      <br />
+      <p>
+        Lorem ipsum dolar sit amet, consectetur adipiscing elit. Nam <br />
+        fermentum sagittis nulla, non vehicula mauris rutrum vitae. Sed non
+        <br />
+        consequat dolar. Cras in odio augue
+      </p>
+
+      <i class="fa-solid fa-angle-left" id="left_angle"></i>
+
+      <i class="fa-solid fa-angle-right" id="right_angle"></i>
+
+      <div class="comment_image">
+        <img
+          src="https://gloxy-react.envytheme.com/static/client-one-367f659ecbdbc4294ca51779e23c6cfb.png"
+          alt=""
+        />
+        <br />
+        <span>
+          <h2>Jason Statham</h2>
+          <h4>Founder & Director</h4>
+        </span>
+      </div>
+    </div>
+
+    <div class="questions">
+      <span id="back">FAQ</span>
+
+      <div class="serv">
+        <h1>Frequently Ask & Questions</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+
+      <div class="questions_content">
+        <div class="morequestions">
+          <h2>One More Question?</h2>
+          <i class="fa-regular fa-envelope" id="envelope"></i>
+          <p>
+            If you have more questions, send us a <br />
+            message and we will answer you as <br />
+            soon as possible.
+          </p>
+        </div>
+        <ul type="none" class="list_of_questions">
+          <li id="que1">
+            <i class="fa-solid fa-angle-right"></i>How do I Purchage an item?
+          </li>
+          <li id="que">
+            <i class="fa-solid fa-angle-right"></i>How to download your items?
+          </li>
+          <br />
+          <li id="que">
+            <i class="fa-solid fa-angle-right"></i>View & download invoices?
+          </li>
+          <br />
+          <li id="que">
+            <i class="fa-solid fa-angle-right"></i>What is Item Support?
+          </li>
+          <br />
+          <li id="que">
+            <i class="fa-solid fa-angle-right"></i>How to contact an author?
+          </li>
+          <br />
+          <li id="que">
+            <i class="fa-solid fa-angle-right"></i>View & download invoices?
+          </li>
+          <br />
+        </ul>
+      </div>
+    </div>
+
+    <div class="partners">
+      <span id="back">PARTNERS</span>
+
+      <div class="serv">
+        <h1>Our Partners</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+      <ul type="none">
+        <li>
+          <img id="partner1"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAxCAMAAAB04mJKAAAAhFBMVEUAAABoa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3fb28AGAAAAK3RSTlMAdxE9Di6WCvX7A9DKN+Fp8QadSkYexKsX2LhakIi+sKZP7RyjYlUl539wR3ALwAAABGRJREFUaN7d1+3aakAUBuBVko9QoheppJJqnf/5bWPWLF50bdf+xX76M4qZ24wZEwzFhznFz2BG8SMEShDD1FNpUWmtA0w8doSKG5o4dW6tRaWdOldqkbRT59pXrCO1U+cKLXE1E6fOtR+kPSqtY8Bk02gNpV3BZGPve9olTDbz0oLSXgxtVxc2/5P2s6Bst0Wu+9DEz8/R/nF9u7Y6sxPah6zSU3Xe46ND9zwXWrlv99fqUxyGte4oLRx0FHmU+tlC3O3JAPbnhXsDQLvhJgARUWuQo8hJWyOiBlWMs4kLH+zUQkfy9AJFzq4bt7BXNANxNmJ052/XpP0ZoaWsUGStLvbkBUZWFeu+LkTTorMRIwB5cwuAD2IIAEsH8QIiFcQq6pKGIltoRX8hvuvSD+LN/aqNYTw3J4pIxiXDkm2v0IxbXDvBvPpxg4iBFGHlDYe5ZaWxZD9sEfEVf9eO57r0aqEuRQ3qVCIhveMJWlxIMa27FFE2YovbSuxB7o/4SRSokYconZR2NV7LXKZsRNOeKJVQ5yjKbyhR/8X1bwUsTdGlIPPCKmmfS19caK7QnqCvTWKe6MvVCK6GqtqgLtFjH9V1ge7ALy6sP/ARBzeQScRBNsSN6BeRmCpotPpNaTOl3RxGcFM5o4HGGOkWH/LA3Xa41RdZPTlBZkP2Prf2XLm52k5ap6WNUGlxBFc2vjvQs4bI85cfZOayo8V1UCTuc0tscX2JA6WFpNGi1Do4gmss6kehXuy9Pjcf4Br8sAPfo97nhtRCHek0gbTUVnLn/2orB//O3ZwzC60j9eGuzy0GuPcBrtbnpn0uAmkFl7VI2hG9S8tuZHzhpgPcwwDXHcW1gLdeXqNF0o7i+qaaafBiLr/Xgy6XL01+ccsOl9eZfZv7An7hekJ7RTlPV7ISc/lXLiG9ZtYYUOdKjA6XR8Frcy2jz9V5qjHXAdJW3EarK20II7geI9e8kPGCAUPcn95CtoEu90HDdm1PzxMoLVzu9O9n5zba8dyYdw8x1ceN9bhvvhN1+bnLDTx6Lx7b0zMAHu4law3WjuIm/JTbL1qTuNe0Qe7BkqPAewar7HD9xAF4Ur/znsGz2/9+etpxXIe4FWbbLAa2SW/mLpe3Ka6ky0HucN+iV21HMOxmmXh+11oBjOTKC3XjDGBnPJdd0Rv3L1zDEUfscIwON7fq3Vd54wFay8Y4rL2wdiQ3lDM4CsUgVtWYOu1PeMfR48Iqo+2rv0E8LuEX1/9Y1OFlgngR3Xs3Ec/2v2vfJ3qrBVXZJHndaHTbvfP0iE7B1RfrSK5D6wpBCY+mtwiKjXXM6QHJ5FZrn93k1lPELxzLKYLFa/fQoafVxmphqWKIA+0ZxvyTrYfP3G1vPY0lB5r4evAMdKNbI8XngXDzZ1jyrTcvTFMzjlKbw5Qzb+0TppzTLLX+nLQhRHPQgtKCNwctkFZyrRQmHtJW3DlogbQVdw5a4BeuNwctVFrizkELSgshzCB/AMq+GmghvgKbAAAAAElFTkSuQmCC"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAAAwCAMAAABnshXlAAAAh1BMVEUAAABoa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3cvm7UCAAAALHRSTlMA0h27SpV4qmn8WgT47oc8FAH0CcJyUTAP6LaN2iHgyIBDzq+kKppiNaCoJcyvimsAAAQlSURBVGje1ZnpkqowEIUbRHYIu6CC4L7k/Z/vahoMGXUYqnKr8PyZdAYJXzjdCQB9hTfb320Kz6KWt04uKYnhG+UQP/HoD2nwdQrJUcAYRHFgmgr0SgAYRCkvKUxRwSqindztUbebQ5mXB2Knx20Db0SuFtVhgtI7Z1mJfh72jZpu78dOE4WiklMwnFELPbEonTRKNF/Ai2zSg3NuWb1k92/iKAd4I+WOqMyWhrGbbQuLU6zXU0ZR36O8ytrWC5h/PUqUrLKH5b4UZXl312xnHGuzwWOGUXI1BgmSjqIB1zCKY18ri92/mpeRGVOKQYDR6dE+subx0dRYcxkIBwVt98xwsD+8YJy1/fsQD1/ir1WJKFlFuZalUOznGKgY+dzAyqNpYvdeOEgFZyOUyxNGiuNssXVi3SsMViANJVxRQV4zGoVmIgocXMxSlTm3YIG7AFhgf5EDwA3bVSwPpaY/FC1Go3iBiAI6Nq84LFPNBuPn2fHdoiQUYlGU+1xIFWcsCt2JKE+LNQALq3fSWMGxSiDcm7JQZu3lNyEEqYuBPRqFngQUZjEECDedvZjOFqK33UUgD6VsdwI5FgCMZuNRPFVEgRSD9MTt1U/2I580WSin7pSoBKcwHoWC+GEPhVvMw5zfOtAqXvfLJUhEueC+JsaoS9fzeBRqiihwizDk9kIR3h2pMlEwVaouzHhxHYsS3TgKtxiqFi+D00tE4deFalq/jUJR0JZJKaKE2I326inoauY6nB5KGeGxAgpaTLAXT3xUIxUFZ674YTBtHEpXPDiKkHn+60KGqnKZKHs8aQ5w3phhN/hjGl0smgJK/QElXL5F0cTy+FrB5jJR0udoBqWbQ4IZ/PB2gTVWKDvmBxRQvUEU0V4u/iHwH5ZINrFur9zjRFuH/s0jn1DAHkIR7bXW2nFjeSjQWmPbOOS5189696vKHFDbhPacjyhgDKCI9tK6yVlJRFm8bic3IauZURc/Gz58RgmKv6D4zx1zgMNZRBoKzr6o7MM/qvwXFMiGUPhm0lPxt2gxWShYMkW5eozPsWJ3sYDfUOAyiBIr2JGy02/kPkXiiOufMEXOBtNdyrUp4XeUvBpC8fniz61tEamvKbT5NnoQJD7ZoZdRQWqsizuPq8z5GVfGQyxfm7aJIgZTwPMQOwig8j3G587aGNYSUVAxZkJoRliBueIYBE355ZEodX+FEZKNkp9ts17tl+NQpvJprENxSGo8F7ePKNN/0ZrbBltqvh8lcTnFMMp+yihc3mY3r037M0psKpP+VMRkJb6m/l7BHDL3Jv7Vi1LvkuUDxVjNLs98mh1ggmIPFln8fl3Rz4eyLM/ayd9Vvb1HA5MUjeY3Hgkob+VeCUxUKxXgzyhWYgbwfXpBqfb2N3LcVdr+Tik8y/IKZXbUtclj/ANcsIFRcIivOgAAAABJRU5ErkJggg=="
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMcAAAAxCAMAAABZEE3wAAAAflBMVEUAAABoa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3d1rtdVAAAAKXRSTlMAliwead2lZPq7CgUk8uUZEPeNfM/HUUGuFOtZOZ6FSTHXdrRyuMGnbbGhBHsAAATBSURBVGje1ZnrsqIwDIAjKFRA7ldBEPFy+v4vuKS0FBB3h112Br8/RwJH86VNcATeUIxJwLzC95HtiJ2PIklIUwu+C3N/pi1PuQKqhgGvNOCLaEvP6RfA4wE7h29BfdEeRQRl6PkdbWIEHp31kOwy2DyxTTvCy5tH0/Bzpx8TNo3yFG2gw/7NYwdVzc/XCWwXd0cog/guzHqAeT9RxnZnMM7ajgdmP+8B4OB+2/AM7mftIQb46IEU0ZZnsGjhwITPHhzd7sfZ5qAMzQH4swcYPtmyR1gA/NZDYjWb9TjrAH/0kFSHjx6mY1nZTLwNuwCzJxTVfA/vjWnE3cMfwFm7yANn8JyH8RMR1mnHmzpMNXieWPhxd2CIVUYem39RIK6PDy11BbvzYcIZ72HysA4j7WZ12TwwcAQFoPpZ4BHrAM5MdRObSppcUYcNJSa2rH12oRJy4SZpe3AB2NEpmMNlEiI+ezuFf6+1Urpb4LGnUQEzGoSO8By2GOE4Goldp9iTy/3iCgAaftqcx3zUhxYVX6lQenSZB5bMeOuMA95XgkRRkntDxP8YTOPkV8o13p2YiAGIdWbJX/LCuuY7m11lDTxKHblh/MZeltwj0jvuPr4DcaQHpYs9Zvq8wBupKLaVsuXgFUx5OGv6EkI0PAEm3pf2ID3w7WWGDKV7Nw0EKtZFX9tDb4OBPCx95kMwW7NfMxQhWPacsj6QZOETBh7w7gEDD9lL5doeGI1cmRcrtY/bxQGZl8c/Gr9d1+aoDtZij+Z/eCRsi0eXIE+sPsFa7CMBTpwQwCBsS4xZ6qGsvK9knwtIFLBFMPAghgE5njWhEPkt9whvjKBMPTYU1/aAxBuNUexaB19d31bNhQr/wF94TLnD6h5wfdIhOUA275F1HsY/e5x1WN0DsXQ/DcX9zQYAMt1XOi5VqyzeYrmHfWxhFXvEJqzvITGtOMVLCoBITlc5KiMAw8M98Q99nqKRC//Do6hAEnYbK8DyWzKsEJ5/w/OQ3IolHtmZv1zf4xUN8qq7DeV44psIw0W9Uyb65GgMDA+1ucADYt6Cq3uohNq6SKzESxzoFoSGFs81FCMG80VDRQjid7xyiQe78Oys7+Fj9JTe4iQuD1R8oMk6haT7OP5JCb5OeeY1RY5BXsW3xmNXXZd4uDb+++oexoHQEXXWxZtxOBVL5kSTGfqTqUs8utkdrL4ehhPYVKJl/eXnYbLQYwYneeIUcL9He/CSt6TxDeiF0xYER1zDSlylrDd3zcR/YtJ2E1hDw/xStymTWsuNsXr+wlUkh1d/Ij4iSZ84HvVaCTsZi8nQ4NEjB5NdpX1INP/osRMe87izUdOEeQwDVmLeg6bq7Oki3PLvV3b85kG9O1bXH3mo2nZ/T+x+0HjKzJSIIpcMQGdNekj4HuhbU3Nhe1gPNr53MjfdptGV7yH5w2984BZhAdukYhme97L7KgBHG/3wqzzkt+XNYt5OrNDJeLzL0rt+/6Rni1uKI5/SaKrYQ6L02SVMsE86jhts8AlF1N9ZlQcvPX+cZssnPd+AbrNkc5+I0js1FaDiJp+njZBdIEsvF0lsue9BeYjSjxeJhlt+3vxpBmvqeJFwJH8d5r2YRKxg27OW8QtSQDJ7CPa+zQAAAABJRU5ErkJggg=="
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAAAvCAMAAACi/GqfAAAAe1BMVEUAAABoa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3doa3cF8QJLAAAAKHRSTlMADt2HdzwdS8uqVKXSmwf6WiIUtbv0RGmgkjPDLezlsIuAcmMwKDfXRX1WvAAABBtJREFUaN7tmO12ojAQQAcUCkiCAgoUEMSP5v2fcMkkkWBktx625+CevX8aUk0uk2EShAnc3RMoLJaQmeSwXML30n3iu4ElEz7VvcJS4b75pwbvzJYbY+67gjHZgnPiiW+25Bw2fc+LfuZM3+Rf8fW9BnTirEnz3EtPO0CK3OfkBK8dkpNTQHyEFMD5IGRTXP0RLUgOxPNJGpLgL/le+/5Kuz7tGaEANGURsbBnyzgfIFk5ANaed0UxSLIz/wfjuNQNSsZsQG4eq3kVDfoeZ76vnKUFBfUZq1HzGjEWxhO+sMG+M0jSePDFNWE19gf9IJlYRcai7d/wPfb9R1AU/RUBxOubyZTvAftSELgNjH2hjDC6UW85LFJUAazH0Nd81cQH/SoDJOftYMIXjnpCdNtH30/Gc+qrv/4C5CLvj42xXvXNI/0sVCpHNX055dvqCVFaj76QxPKLpVwCxrnM9bUSn/Xsxfd2erDXYsAJ30pLiJ0PY98gBouKKVkjJ2Kc0+98T9/w3Z6FzVbuKRwHkEzIT/hCOCTEKXjwTUWQsYhsdN8UfY825/jgm9Jv+CaWtR8CVZi+3ZRvNyRESce+B5SG6+gcy9AUhqGcsS/qBvad/TNf1wdoMFA4QyOSTPc9TfnGkbrPKgfdlwa18D2YvvtJX6Eb/eHMvg6UTodlFJuV7ttO+UKiEmJ10H1LWz10H6Yvm/ItdN1pX48CWPipEBUM38n4qu4zDjLKh9tR+r4QX/x8xP7geyPjLNi8kL9AZeLfCoCn+et8O38R2q0f+YAxRUp6SrXw0Oq+HZPFODB9ESISonAefSFEX9f0TU3fF6CeKDV7cevKTKbj6R4uKS4pqtHWePbA8O1cgK3cAxO9nq1m+QYrQBqlieZopoLNZSpZoSW5q1o23mdr+HLiEIAY+9ttlm9z1Z+cjSrAHSD+vb7WvLUGSQljwc+nvkUob9SGwc6DOb6xmtnaqz05rofzWXgPTq6tK1yHh/aqfEzfQ1Ti83s/n5158zbLN+tUy7+v+KFXP1K1gF8xYLPmk4nFoMlFK4dY8AxfHCblgfBwWDVFBrN8PfeeyMPhpfLk8d3H9wvBBQ+GB35OTLPxKze7mr4XotbD6jVtF+PN6gAMX4/Cd7m15Wol0mFVeMjqIt7GQq8tkqZztUqybY6M7W0vV9mq9uRQtXckwUHyTSoGA+Sz+KpJ2xybzALD1+N9VaBD4WUqYjNWNw6MoXFMzZ9tY/gzlvii4evF/M/eOGC+xi63YkxYB34AzVfpzvNFiKw+9PJzvu5dd76vI6t7dfo5X5C6833Vi1xiFbcf8zVxZvi6tjwEvYkvWFnutw68ja/kv+/7+X7Fb+WL54lqbUIW6Yu6l5o9YYm+SvddfDEZavY2vlzZs6dZmO8v8Rj5hUd7b30AAAAASUVORK5CYII="
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALoAAAAvCAYAAABUpdABAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo5MzcyYzBlYi02Yzk4LTEzNGUtYjA0Yy03YTA3M2VmZDYyNzUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTE2NDQxRDFFNUQ4MTFFQTlEODlEM0RDNUJGODk3MjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTE2NDQxRDBFNUQ4MTFFQTlEODlEM0RDNUJGODk3MjMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ZDUyZmIzMmYtMzk0My1lZjQ1LTk3MzktZDcxZGEyOGIyZjE4IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NTQ2NTRmZTEtOThjZS01MTRiLThhNDUt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"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+
+    <div class="blog" id="blog">
+       <span id="back">BLOG</span>
+
+      <div class="serv">
+        <h1>Our Blog</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+
+       <div class="blog_box" id="blog_box1">
+        <img src="https://gloxy-react.envytheme.com/static/blog-one-7758b1bbbe2fbd6a778366dd314d781f.jpg" alt="">
+       
+        <p> <i class="fa-solid fa-user"></i>   Admin    <i class="fa-solid fa-calendar" id="cal"></i> August 12, 2023</p>
+      
+      <h2>14 ridiculously cool websites <br>you never know.</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore.</p>
+      
+      <button id="read">Read More</button>
+      
+      </div>
+
+
+       <div class="blog_box" id="blog_box">
+        <img src="https://gloxy-react.envytheme.com/static/blog-two-2673bfba3774e313bfc003d3b45fe866.jpg" alt="">
+      
+       <p> <i class="fa-solid fa-user"></i>   Admin    <i class="fa-solid fa-calendar" id="cal"></i> August 13, 2023</p>
+      
+      <h2>Top 10 hot marketing trends you <br>need..</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore.</p>
+      
+      <button id="read">Read More</button>
+      
+      </div>
+
+
+       <div class="blog_box" id="blog_box">
+        <img src="https://gloxy-react.envytheme.com/static/blog-three-8b556cde69499127febf6645010944d9.jpg" alt="">
+      
+       <p> <i class="fa-solid fa-user"></i>   Admin    <i class="fa-solid fa-calendar" id="cal"></i> August 14, 2023</p>
+      
+      <h2>10 reasons you need a digital <br>marketing strategy</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore.</p>
+      
+      <button id="read">Read More</button>
+      
+      </div>
+
+       </div>
+    </div>
+
+    <div class="help" id="help">
+      <span id="back">CPNTACT</span>
+
+      <div class="serv">
+        <h1>Our Contact</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+          augue at erat hendrerit dictum. <br />
+          Praesent porta, purus eget sagittis imperdiet.
+        </p>
+      </div>
+      <div class="info">
+
+        <ul type="none">
+          <li><i class="fa-solid fa-location-dot"></i><h2 id="head1">Address</h2><span id="span1"> 2750 Quadra Street Victoria, Canada.</span></li>
+          <li><i class="fa-solid fa-envelope"></i><h2 id="head2">Email</h2> <span id="span2">hello@gloxy.com</span></li>
+          <li><i class="fa-solid fa-phone"></i><h2 id="head3">Phone</h2><span id="span2"> +1-325-555-0156</span></li>
+        </ul>
+
+      </div>
+      <form action="">
+      <div class="form">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="subject" placeholder="Subject">
+        <input type="phone" id="phone" placeholder="Phone">
+        <input type="text" id="message" placeholder="Your Message...">
+
+        <button>Submit  <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <span>© 2025 All Rights Reserved.</span>
+      <i class="fa-solid fa-angle-up" id="up"></i>
+      <ul type="none" class="follow">
+        Follow Us On :  
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-google"></i></li>
+        <li><i class="fa-brands fa-linkedin-in"></i></li>
+      </ul>
+    </div>
+  </body>
+</html>
