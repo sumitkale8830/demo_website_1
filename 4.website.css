@@ -266,13 +266,15 @@ a {
   0% {
     background-position: 0% 50%;
   }
-  50% {
+  10% {
     background-position: 100% 50%;
-    border-top-right-radius: 20%;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
   }
-  100% {
+  90% {
     background-position: 0% 50%;
-    border-bottom-left-radius: 20%;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
   }
 }
 
