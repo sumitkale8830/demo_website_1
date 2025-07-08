@@ -19,6 +19,7 @@
   position: absolute;
   left: 7%;
   cursor: pointer;
+  z-index: 2;
 }
 
 .nav2 {
@@ -27,6 +28,9 @@
   background-color: antiquewhite;
   box-sizing: border-box;
   text-align: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .contact {
