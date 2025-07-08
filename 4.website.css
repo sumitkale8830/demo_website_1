@@ -4,6 +4,12 @@
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
 }
+#check {
+  display: none;
+}
+label {
+  display: none;
+}
 
 .nav1 {
   height: 50px;
@@ -33,6 +39,9 @@
   z-index: 1;
 }
 
+.nav2 img {
+  display: none;
+}
 .contact {
   display: inline-block;
   margin-left: 13%;
@@ -1217,9 +1226,9 @@ a {
 
 @media (max-width: 555px) {
   .nav1 {
-    height: 50px;
+    height: 70px;
     width: 100%;
-    background-color: transparent;
+    background-color: rgb(249, 243, 236);
     font-size: large;
     box-sizing: border-box;
   }
@@ -1230,6 +1239,7 @@ a {
     position: absolute;
     left: 2%;
     cursor: pointer;
+    display: none;
   }
 
   .logo img {
@@ -1238,43 +1248,45 @@ a {
   }
 
   .nav2 {
-    height: 55px;
+    height: 70px;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: rgb(254, 86, 25);
     box-sizing: border-box;
     text-align: center;
+    color: white;
   }
 
   .contact {
     display: inline-block;
-    margin-left: 17%;
+    margin-left: 22%;
     margin-top: 1%;
     color: rgb(83, 75, 64);
-    width: 35%;
+    width: 70%;
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
   }
 
   .contact i {
-    margin-left: 8px;
+    margin-left: 10px;
     margin-right: 10px;
   }
 
   #links {
-    float: right;
-    width: 29%;
+    float: left;
+    width: 40%;
     box-sizing: border-box;
-    margin-top: 2.5%;
+    margin-top: 2%;
+    margin-left: 33%;
   }
 
   #links li {
     display: inline-block;
     margin-right: 3%;
-    background-color: rgba(250, 235, 217, 0.5);
-    height: 25px;
-    width: 25px;
+    background-color: rgba(243, 219, 190, 0.5);
+    height: 30px;
+    width: 30px;
     text-align: center;
     border-radius: 50%;
   }
@@ -1284,45 +1296,88 @@ a {
     color: rgb(77, 68, 57);
     cursor: pointer;
   }
-
+  .nav2 img {
+    display: block;
+    margin-left: 30px;
+  }
   .nav2 li {
-    display: inline-block;
-    width: 48px;
-    font-size: 10px;
-    height: 100%;
+    width: 80%;
+    font-size: 15px;
+    line-height: 45px;
+    text-align: center;
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
   }
   .nav2 i {
     visibility: hidden;
   }
-  a {
-    color: black;
-  }
-
   #li1 {
-    margin-left: 14%;
     box-sizing: border-box;
+    color: white;
+    margin-left: 0%;
   }
 
   #li1:hover {
-    background-color: rgb(254, 86, 25);
+    background-color: rgb(237, 68, 6);
     color: white;
-    height: 55px;
-    width: 48px;
+    height: 45px;
+    width: 80%;
     transition: 0.5s;
   }
   #li2:hover {
-    background-color: rgb(254, 86, 25);
+    background-color: rgb(237, 68, 6);
     color: white;
-    height: 55px;
-    width: 48px;
+    height: 45px;
+    width: 80%;
     transition: 0.5s;
   }
 
   #li1 p {
-    margin-top: 22px;
+    margin-top: 5px;
   }
   #li2 p {
-    margin-top: 22px;
+    margin-top: 5px;
+    color: white;
+  }
+  #check {
+    display: none;
+  }
+  label {
+    display: block;
+    position: sticky;
+    top: -67px;
+    z-index: 999;
+  }
+
+  label #btn {
+    right: 10px;
+    top: 80px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    z-index: 100;
+    position: absolute;
+    cursor: pointer;
+    border: 5px solid rgb(97, 29, 5);
+  }
+  #check:checked ~ .nav2 {
+    top: 0px;
+    height: 465px;
+    li {
+      display: block;
+      margin-left: 10%;
+    }
+  }
+
+  #check:checked ~ .label #btn {
+    left: 0%;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .main {
@@ -1549,7 +1604,7 @@ a {
 
   .works {
     text-align: center;
-    height: 1150px;
+    height: 3450px;
     width: 100%;
     background-color: transparent;
     padding: 100px 5% 100px 6%;
@@ -1558,10 +1613,10 @@ a {
   }
 
   .work_boxex {
-    height: 260px;
-    width: 45%;
+    height: 500px;
+    width: 100%;
     float: left;
-    margin-left: 1.5%;
+    margin-left: 0%;
     margin-top: 20px;
     box-sizing: border-box;
     border: 0.5px solid rgb(223, 219, 219);
@@ -1570,11 +1625,11 @@ a {
     display: flex;
   }
   #work_boxex {
-    margin-left: 5%;
+    margin-left: 0%;
     box-sizing: border-box;
   }
   #our_box {
-    margin-left: 5%;
+    margin-left: 0%;
     box-sizing: border-box;
   }
 
