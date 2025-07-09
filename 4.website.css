@@ -1091,21 +1091,22 @@ a {
   color: white;
   box-sizing: border-box;
   float: left;
-  font-weight: 550;
+  font-weight: 400;
 }
 
 .footer span {
   float: left;
-  margin-left: 16%;
-  margin-top: 1.6%;
+  margin-left: 7%;
+  margin-top: 2%;
+  font-size: 15px;
 }
 
 #up {
   float: right;
   margin-right: 2%;
   font-size: xx-large;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   background-color: black;
   text-align: center;
   box-sizing: border-box;
@@ -1114,21 +1115,21 @@ a {
 
 .follow {
   float: right;
-  margin-top: 1.6%;
-  margin-right: 200px;
+  margin-top: 1.7%;
+  margin-right: 30px;
+  font-size: 15px;
 }
 
 .footer li {
   display: inline-block;
-  margin-right: 15px;
-  margin-left: 2px;
+  margin-right: 8px;
   background-color: rgb(158, 54, 16);
   height: 30px;
   width: 30px;
   margin-top: -0.8%;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 2%;
+  padding-top: 2.5%;
   border-radius: 50%;
 }
 
