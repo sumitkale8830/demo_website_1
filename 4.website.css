@@ -1256,7 +1256,7 @@ a {
     text-align: center;
     color: white;
     padding-top: 8px;
-    z-index: 990;
+    z-index: 90;
   }
 
   .contact {
@@ -1891,7 +1891,7 @@ a {
     width: 100%;
     background-color: transparent;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 10;
   }
 
   .pricing button {
@@ -1935,6 +1935,7 @@ a {
     width: 80%;
     float: left;
     margin-top: 5%;
+    z-index: 15;
   }
 
   #price_box_right {
@@ -1952,7 +1953,7 @@ a {
     box-shadow: 2px 2px 8px rgb(212, 212, 212);
     border-radius: 5px;
     margin-left: 10%;
-    z-index: 1;
+    z-index: 10;
   }
 
   #price_box_center {
