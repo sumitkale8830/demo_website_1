@@ -1256,7 +1256,7 @@ a {
     text-align: center;
     color: white;
     padding-top: 8px;
-    z-index: 99;
+    z-index: 990;
   }
 
   .contact {
@@ -1352,7 +1352,7 @@ a {
     display: block;
     position: sticky;
     top: -67px;
-    z-index: 999;
+    z-index: 900000;
   }
 
   label #btn {
