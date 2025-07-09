@@ -613,6 +613,7 @@ a {
   padding-top: 8%;
   box-sizing: border-box;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .price_inner1 {
@@ -623,6 +624,7 @@ a {
   padding-top: 8%;
   box-sizing: border-box;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .price_boxex h3 {
